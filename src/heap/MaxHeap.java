@@ -32,6 +32,30 @@ public class MaxHeap {
 			}
 		}
 	}
+	//delete root element and replace with last element
+	public void delete() {
+		heap[1]=heap[n--];
+		int i=1;
+		while(i<=n) {
+			int left=i*2;
+			int right=i*2+1;
+			if(heap[left]>heap[i]) {
+				int temp=heap[left];
+				heap[left]=heap[i];
+				heap[i]=temp;
+				i=left;
+			}
+			if(heap[right]>heap[i]) {
+				int temp=heap[right];
+				heap[right]=heap[i];
+				heap[i]=temp;
+				i=right;
+			}else {
+				return;
+			}
+			
+		}
+	}
 	public void print() {
 		for(int i=1;i<heap.length;i++) {
 			System.out.print(heap[i]+" ");
@@ -58,6 +82,9 @@ public class MaxHeap {
 		maxHeap.insert(35);
 		maxHeap.insert(10);
 		maxHeap.insert(60);
+		maxHeap.print();
+		maxHeap.delete();
+		System.out.println();
 		maxHeap.print();
 	}
 
