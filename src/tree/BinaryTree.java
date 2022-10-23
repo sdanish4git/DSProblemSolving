@@ -25,7 +25,7 @@ public class BinaryTree {
 		System.out.println();
 		postOrder(root);
 		System.out.println("###########");
-		levelOrderTraversalRecursive(root,);
+		levelOrderTraversalRecursive(root,3);
 	}
 	
 	static Node createTree() {
