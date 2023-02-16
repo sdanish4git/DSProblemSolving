@@ -1,8 +1,23 @@
+import java.util.ArrayList;
+import java.util.List;
 
 public class Test {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		 
+	         List<Integer> row = new ArrayList<>();
+	        for (int i = 0; i <= 1; i++) {
+	            row.add(0, 1);
+	            for (int j = 1; j < i; j++) {
+	                row.set(j, row.get(j) + row.get(j + 1));
+	            }
+	        }
+	        System.out.println(row);;
+	        
+	    
+		
 		String s1="Flow";
 		String s2="Flow";
 		//System.out.println(s2.indexOf(s1));
